@@ -43,7 +43,12 @@
       "shouldUseDataRaw": false,
       "eventBreakerRegex": "/[\\n\\r]+(?!\\s)/",
       "name": "Security Events",
-      "fields": []
+      "fields": [
+        {
+          "value": "JSON.parse([_raw]).offset",
+          "name": "offset"
+        }
+      ]
     }
   ],
   "description": "Event breaking rules to handle Akamai Multi-JSON responses"
